@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaMoon, FaSun, FaEnvelope, FaCode, FaHeart } from "react-icons/fa";
-import { SiTypescript, SiJavascript, SiReact, SiNodedotjs, SiPython } from "react-icons/si";
+import { SiTypescript, SiJavascript, SiReact, SiNodedotjs, SiPython, SiRuby } from "react-icons/si";
 import shk from "./assets/shk.jpg";
 
 export default function Portfolio() {
@@ -81,17 +81,17 @@ export default function Portfolio() {
             whileHover={{ scale: 1.05 }}
             className="logo"
           >
-            Shakar Hassan
+            Let That Sink In.
           </motion.h1>
 
           <div className="nav-icons">
-            <SocialIcon href="https://github.com">
+            <SocialIcon href="https://github.com/Shakar-Hassan">
               <FaGithub size={20}/>
             </SocialIcon>
-            <SocialIcon href="https://linkedin.com">
+            <SocialIcon href="https://www.linkedin.com/in/shakarhassan/">
               <FaLinkedin size={20}/>
             </SocialIcon>
-            <SocialIcon href="mailto:your@email.com">
+            <SocialIcon href="mailto:Shakarmohammed2002@gmail.com">
               <FaEnvelope size={20}/>
             </SocialIcon>
 
@@ -147,7 +147,7 @@ export default function Portfolio() {
             transition={{ duration: 1, delay: 0.7 }}
             className="hero-subtitle"
           >
-            Full-Stack Developer & Creative Engineer crafting digital experiences 
+            Full-Stack Developer & Creative Engineer crafting digital experiences
             with <span className="highlight-cyan">innovation</span> and{" "}
             <span className="highlight-purple">passion</span>
           </motion.p>
@@ -164,6 +164,7 @@ export default function Portfolio() {
             <TechIcon icon={<SiTypescript className="ts-icon" />} name="TypeScript" />
             <TechIcon icon={<SiNodedotjs className="node-icon" />} name="Node.js" />
             <TechIcon icon={<SiPython className="python-icon" />} name="Python" />
+            <TechIcon icon={<SiRuby className="ruby-icon" />} name="Ruby" />
           </motion.div>
 
           {/* ENHANCED CTA BUTTONS */}
@@ -215,10 +216,10 @@ export default function Portfolio() {
               </p>
               <div className="stats-container">
                 <motion.div whileHover={{ scale: 1.05 }} className="stat-item cyan">
-                  5+ Years
+                  2+ Years
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} className="stat-item purple">
-                  50+ Projects
+                  10+ Projects
                 </motion.div>
               </div>
             </motion.div>
@@ -274,9 +275,9 @@ export default function Portfolio() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="contact-info"
             >
-              <ContactItem icon={<FaEnvelope />} label="Email" value="your@email.com" />
-              <ContactItem icon={<FaGithub />} label="GitHub" value="github.com/yourusername" />
-              <ContactItem icon={<FaLinkedin />} label="LinkedIn" value="linkedin.com/in/yourusername" />
+              <ContactItem icon={<FaEnvelope />} label="Email" value="Shakarmohammed2002@gmail.com" />
+              <ContactItem icon={<FaGithub />} label="GitHub" value="https://github.com/Shakar-Hassan" />
+              <ContactItem icon={<FaLinkedin />} label="LinkedIn" value="https://www.linkedin.com/in/shakarhassan" />
             </motion.div>
           </div>
         </AnimatedSection>

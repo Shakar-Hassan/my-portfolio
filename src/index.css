@@ -336,7 +336,7 @@ body {
 .ts-icon { color: var(--accent-blue); }
 .node-icon { color: var(--accent-green); }
 .python-icon { color: #3776ab; }
-
+.ruby-icon { color: #cc342d; }
 /* CTA Buttons */
 .cta-container {
   display: flex;
