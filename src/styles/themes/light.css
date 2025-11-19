@@ -1,0 +1,10 @@
+/* Light theme variables */
+.light-theme {
+  --primary-bg: #ffffff;
+  --secondary-bg: #f8fafc;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --glass-bg: rgba(0, 0, 0, 0.03);
+  --glass-border: rgba(0, 0, 0, 0.1);
+}
