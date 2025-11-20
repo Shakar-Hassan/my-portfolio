@@ -22,10 +22,9 @@
   --glass-border: rgba(255, 255, 255, 0.1);
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   
-  /* Spacing - FIXED */
-  --section-padding: 4rem;
+  /* Spacing */
+  --section-padding: 6rem;
   --container-max-width: 1200px;
-  --container-padding: 2rem;
 }
 
 /* Base styles */
@@ -49,14 +48,6 @@ body {
   background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 50%, var(--primary-bg) 100%);
 }
 
-/* ADD THIS CONTAINER CLASS */
-.container {
-  width: 100%;
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  padding: 0 var(--container-padding);
-}
-
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -68,27 +59,15 @@ html {
   display: none;
 }
 
-/* Responsive Design */
-/* Mobile First */
-@media (max-width: 768px) {
-  :root {
-    --container-padding: 1rem;
-    --section-padding: 2rem;
-  }
+::-webkit-scrollbar-track {
+  background: var(--primary-bg);
 }
 
-/* Tablet */
-@media (min-width: 769px) and (max-width: 1024px) {
-  :root {
-    --container-padding: 2rem;
-    --section-padding: 3rem;
-  }
+::-webkit-scrollbar-thumb {
+  background: var(--glass-bg);
+  border-radius: 4px;
 }
 
-/* Desktop */
-@media (min-width: 1025px) {
-  :root {
-    --container-padding: 2rem;
-    --section-padding: 4rem;
-  }
+::-webkit-scrollbar-thumb:hover {
+  background: var(--glass-border);
 }
