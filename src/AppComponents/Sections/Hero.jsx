@@ -7,27 +7,12 @@ import TechIcon from "../UI/TechIcon";
 
 export default function Hero() {
 
-  // Function to scroll slowly to projects
-  const scrollToProjects = () => {
-    const projects = document.getElementById("projects");
-    if (!projects) return;
+const scrollToProjects = () => {
+  const projects = document.getElementById("projects");
+  if (!projects) return;
 
-    const targetY = projects.getBoundingClientRect().top + window.scrollY;
-    const startY = window.scrollY;
-    const distance = targetY - startY;
-    const duration = 1500; // 1500ms = 1.5 seconds
-    let startTime = null;
-
-    function step(currentTime) {
-      if (!startTime) startTime = currentTime;
-      const progress = currentTime - startTime;
-      const percent = Math.min(progress / duration, 1);
-      window.scrollTo(0, startY + distance * percent);
-      if (progress < duration) requestAnimationFrame(step);
-    }
-
-    requestAnimationFrame(step);
-  };
+  projects.scrollIntoView({ behavior: "smooth" });
+};
 
   return (
     <header className="hero-section">

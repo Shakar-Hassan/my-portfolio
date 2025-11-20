@@ -23,21 +23,21 @@ export default function Contact() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="contact-info"
         >
-          <ContactItem 
-            icon={<FaEnvelope />} 
+          <ContactItem
+            icon={<FaEnvelope/>}
             label="Email"
             href="mailto:Shakarmohammed2002@gmail.com"
           />
 
-          <ContactItem 
-            icon={<FaGithub />} 
-            label="GitHub" 
+          <ContactItem
+            icon={<FaGithub />}
+            label="GitHub"
             href="https://github.com/Shakar-Hassan"
           />
 
-          <ContactItem 
-            icon={<FaLinkedin />} 
-            label="LinkedIn" 
+          <ContactItem
+            icon={<FaLinkedin />}
+            label="LinkedIn"
             href="https://www.linkedin.com/in/shakarhassan"
           />
         </motion.div>

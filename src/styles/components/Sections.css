@@ -177,6 +177,10 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+  text-decoration: none;
+}
+.contact-item {
+  text-decoration: none;
 }
 
 @media (min-width: 768px) {
