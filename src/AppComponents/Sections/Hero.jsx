@@ -6,8 +6,32 @@ import shk from "../../assets/shk.jpg";
 import TechIcon from "../UI/TechIcon";
 
 export default function Hero() {
+
+  // Function to scroll slowly to projects
+  const scrollToProjects = () => {
+    const projects = document.getElementById("projects");
+    if (!projects) return;
+
+    const targetY = projects.getBoundingClientRect().top + window.scrollY;
+    const startY = window.scrollY;
+    const distance = targetY - startY;
+    const duration = 1500; // 1500ms = 1.5 seconds
+    let startTime = null;
+
+    function step(currentTime) {
+      if (!startTime) startTime = currentTime;
+      const progress = currentTime - startTime;
+      const percent = Math.min(progress / duration, 1);
+      window.scrollTo(0, startY + distance * percent);
+      if (progress < duration) requestAnimationFrame(step);
+    }
+
+    requestAnimationFrame(step);
+  };
+
   return (
     <header className="hero-section">
+      {/* Avatar */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -21,15 +45,14 @@ export default function Hero() {
         </div>
       </motion.div>
 
+      {/* Hero Title */}
       <motion.h1
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
         className="hero-title"
       >
-        <span className="hero-gradient">
-          Hi, I'm
-        </span>
+        <span className="hero-gradient">Hi, I'm</span>
         <br />
         <motion.span
           initial={{ opacity: 0, x: -50 }}
@@ -41,6 +64,7 @@ export default function Hero() {
         </motion.span>
       </motion.h1>
 
+      {/* Subtitle */}
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -52,6 +76,7 @@ export default function Hero() {
         <span className="highlight-purple">passion</span>
       </motion.p>
 
+      {/* Skills */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -66,25 +91,30 @@ export default function Hero() {
         <TechIcon icon={<SiRuby className="ruby-icon" />} name="Ruby" />
       </motion.div>
 
+      {/* CTA Buttons */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.1 }}
         className="cta-container"
       >
-        <motion.button
+        {/* Email */}
+        <motion.a
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="cta-button primary"
-          onClick={() => window.location.href = "mailto:Shakarmohammed2002@gmail.com"}
+          href="mailto:Shakarmohammed2002@gmail.com"
         >
-          <FaEnvelope className="button-icon"/>
+          <FaEnvelope className="button-icon" />
           Get In Touch
-        </motion.button>
+        </motion.a>
+
+        {/* View Projects with slow scroll */}
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="cta-button secondary"
+          onClick={scrollToProjects}
         >
           <FaCode className="button-icon" />
           View Projects

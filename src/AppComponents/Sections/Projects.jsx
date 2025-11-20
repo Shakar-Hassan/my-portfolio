@@ -3,24 +3,26 @@ import ProjectCard from "../UI/ProjectCard";
 
 export default function Projects() {
   return (
-    <AnimatedSection title="Featured Projects" delay={0.2}>
-      <div className="projects-grid">
-        <ProjectCard
-          title="E-Commerce Platform"
-          desc="Next.js e-commerce with animations, Stripe integration, and admin dashboard."
-          tags={["Next.js", "Stripe", "Tailwind"]}
-        />
-        <ProjectCard
-          title="AI Chat Application"
-          desc="Real-time chat app with AI integration, voice messages, and end-to-end encryption."
-          tags={["React", "Node.js", "WebSocket"]}
-        />
-        <ProjectCard
-          title="Data Visualization Dashboard"
-          desc="Interactive dashboard with real-time data, charts, and customizable widgets."
-          tags={["TypeScript", "D3.js", "Express"]}
-        />
-      </div>
-    </AnimatedSection>
+    <section id="projects">
+      <AnimatedSection title="Featured Projects" delay={0.2}>
+        <div className="projects-grid">
+          <ProjectCard
+            title="Lingo Live"
+            desc="An Interactive Web Application for German Language Learning Progress Tracking."
+            tags={["JavaScript", "Ruby on rails", "PostgreSQL"]}
+          />
+          <ProjectCard
+            title="Eco Bickers"
+            desc="Sustainable Transport Web Platform for Eco-friendly Products."
+            tags={["JavaScript", "Ruby on rails", "PostgreSQL"]}
+          />
+          <ProjectCard
+            title="NicBlendz"
+            desc="Custom Web Platform for Barber Shop Operations and Client Management."
+            tags={["JavaScript", "Ruby on rails", "PostgreSQL"]}
+          />
+        </div>
+      </AnimatedSection>
+    </section>
   );
 }

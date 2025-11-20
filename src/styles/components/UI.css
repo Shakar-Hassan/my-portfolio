@@ -71,6 +71,7 @@
   background: var(--gradient-primary);
   color: white;
   box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+  text-decoration: none;
 }
 
 .cta-button.primary:hover {

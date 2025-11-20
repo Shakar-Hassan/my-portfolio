@@ -38,13 +38,13 @@ export default function ProjectCard({ title, desc, tags = [] }) {
           whileHover={{ x: 5 }}
           className="project-link"
         >
-          View Project
+          {/* View Project */}
           <motion.span
             animate={{ x: [0, 5, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
             className="link-arrow"
           >
-            →
+            {/* → */}
           </motion.span>
         </motion.a>
       </div>
