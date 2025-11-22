@@ -1,4 +1,5 @@
-/* Falling Stars */
+/* FallingStars.css */
+
 .falling-stars-container {
   position: fixed;
   top: 0;
@@ -17,50 +18,33 @@
   background: linear-gradient(
     to bottom,
     transparent,
-    rgba(255, 255, 255, 0.8),
+    rgba(var(--star-color), 0.8),
     transparent
   );
   border-radius: 50%;
   filter: blur(0.5px);
-  box-shadow: 
-    0 0 10px rgba(255, 255, 255, 0.8),
-    0 0 20px rgba(59, 130, 246, 0.6),
-    0 0 30px rgba(139, 92, 246, 0.4);
+  box-shadow:
+    0 0 10px rgba(var(--star-color), 0.8),
+    0 0 20px rgba(var(--star-color), 0.6);
+  animation: twinkle 1.5s infinite alternate;
 }
 
-/* Optional: Different colored stars */
-.falling-star:nth-child(3n) {
+.falling-star.shooting {
+  width: 20px;
+  height: 2px;
   background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(59, 130, 246, 0.8),
-    transparent
+    to right,
+    rgba(var(--star-color), 0.8),
+    rgba(var(--star-color), 0)
   );
-  box-shadow: 
-    0 0 10px rgba(59, 130, 246, 0.8),
-    0 0 20px rgba(59, 130, 246, 0.6);
+  box-shadow:
+    0 0 10px rgba(var(--star-color), 0.8),
+    0 0 20px rgba(var(--star-color), 0.6);
+  animation: none;
 }
 
-.falling-star:nth-child(3n + 1) {
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(236, 72, 153, 0.8),
-    transparent
-  );
-  box-shadow: 
-    0 0 10px rgba(236, 72, 153, 0.8),
-    0 0 20px rgba(236, 72, 153, 0.6);
-}
-
-.falling-star:nth-child(3n + 2) {
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(6, 182, 212, 0.8),
-    transparent
-  );
-  box-shadow: 
-    0 0 10px rgba(6, 182, 212, 0.8),
-    0 0 20px rgba(6, 182, 212, 0.6);
+@keyframes twinkle {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
 }
