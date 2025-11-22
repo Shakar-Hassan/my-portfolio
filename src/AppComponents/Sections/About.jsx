@@ -26,7 +26,7 @@ export default function About() {
               2+ Years
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} className="stat-item purple">
-              10+ Projects
+              5+ Projects
             </motion.div>
           </div>
         </motion.div>
