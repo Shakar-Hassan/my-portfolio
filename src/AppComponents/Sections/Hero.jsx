@@ -12,7 +12,7 @@ const scrollToProjects = () => {
   if (!projects) return;
 
   projects.scrollIntoView({ behavior: "smooth" });
-};
+}
 
   return (
     <header className="hero-section">
