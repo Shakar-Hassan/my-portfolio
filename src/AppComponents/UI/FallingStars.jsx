@@ -6,7 +6,7 @@ export default function FallingStars() {
   const stars = Array.from({ length: 15 }, (_, i) => ({
     id: i,
     left: Math.random() * 100,
-    delay: Math.random() * 20,
+    delay: Math.random() * 100,
     duration: 2 + Math.random() * 3,
   }));
 
@@ -41,3 +41,6 @@ export default function FallingStars() {
     </div>
   );
 }
+
+
+
