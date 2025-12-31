@@ -1,0 +1,15 @@
+
+
+/* Focus states for accessibility */
+.cta-button:focus,
+.theme-toggle:focus,
+.social-icon:focus {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+}
+
+.project-link:focus {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
