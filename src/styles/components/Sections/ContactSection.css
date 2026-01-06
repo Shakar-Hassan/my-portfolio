@@ -1,0 +1,29 @@
+/* Contact Section */
+.contact-container {
+  text-align: center;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.contact-text {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  text-decoration: none;
+}
+.contact-item {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .contact-info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
