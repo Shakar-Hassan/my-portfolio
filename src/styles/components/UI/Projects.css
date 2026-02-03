@@ -20,6 +20,8 @@
   backdrop-filter: blur(1rem);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
+  text-decoration: none;
+  color: inherit;
 }
 
 .project-bg-gradient {
