@@ -2,12 +2,16 @@
 import { motion } from "framer-motion";
 import { FaCode } from "react-icons/fa";
 
-export default function ProjectCard({ title, desc, tags = [] }) {
+export default function ProjectCard({ title, desc, tags = [], link }) {
   return (
-    <motion.div
+    <motion.a
+      href={link || "#"}
+      target={link ? "_blank" : undefined}
+      rel={link ? "noopener noreferrer" : undefined}
       whileHover={{ scale: 1.03, y: -10 }}
       transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
       className="project-card"
+      aria-label={title}
     >
       <div className="project-bg-gradient" />
 
@@ -33,21 +37,8 @@ export default function ProjectCard({ title, desc, tags = [] }) {
           ))}
         </div>
 
-        <motion.a
-          href="#"
-          whileHover={{ x: 5 }}
-          className="project-link"
-        >
-          {/* View Project */}
-          <motion.span
-            animate={{ x: [0, 5, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="link-arrow"
-          >
-            {/* → */}
-          </motion.span>
-        </motion.a>
+        {/* clickable card — link handled on outer element */}
       </div>
-    </motion.div>
+    </motion.a>
   );
 }
